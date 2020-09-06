@@ -1,0 +1,25 @@
+$TTL 300
+@   IN  SOA     kubevirt.kmash.com. root.kmash.com (
+                2011071001  ;Serial
+                3600        ;Refresh
+                1800        ;Retry
+                604800      ;Expire
+                300         ;Minimum TTL
+)
+@       IN  NS          kubevirt.kmash.com.
+@       IN  A           10.1.11.247
+
+kubevirt	IN	A	10.1.11.247
+haproxy.kubevirt	IN	A	10.1.11.247
+bastion.kubevirt	IN	A	10.1.11.247
+bootstrap.kubevirt	IN	A	10.1.11.219
+master-0.kubevirt	IN	A	10.1.11.222	;master-0.kmash.com
+master-1.kubevirt	IN	A	10.1.11.221	;master-1.kmash.com
+master-2.kubevirt	IN	A	10.1.11.215  	;master-2.kmash.com
+worker-0.kubevirt	IN	A	10.1.11.220	;worker-0.kmash.com
+worker-1.kubevirt	IN	A	10.1.11.234	;worker-1.kmash.com
+
+;CNAME Record
+api.kubevirt     IN CNAME haproxy.kubevirt.kmash.com.
+api-int.kubevirt IN CNAME haproxy.kubevirt.kmash.com.
+*.apps.kubevirt  IN CNAME haproxy.kubevirt.kmash.com.

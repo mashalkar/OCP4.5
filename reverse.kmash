@@ -1,0 +1,23 @@
+$TTL 86400
+@   IN  SOA     kubevirt.kmash.com. root.kmash.com. (
+        2011071001  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        86400       ;Minimum TTL
+)
+@       IN  NS          kubevirt.kmash.com.
+@       IN  PTR         kmash.local.
+kubevirt	IN	A	10.1.11.247
+247	IN	PTR	kubevirt.kmash.com
+;bastion         IN  A   10.1.11.247
+;kmash           IN  A   10.65.176.35
+247     IN  PTR         bastion.kubevirt.kmash.com.
+247	IN  PTR		haproxy.kubevirt.kmash.com.
+35      IN  PTR         kmash.kubevirt.kmash.com.
+219	IN  PTR		bootstrap.kubevirt.kmash.com.
+222	IN  PTR		master-0.kubevirt.kmash.com.
+221	IN  PTR		master-1.kubevirt.kmash.com.
+215	IN  PTR		master-2.kubevirt.kmash.com.
+220	IN  PTR		worker-0.kubevirt.kmash.com.
+234	IN  PTR		worker-1.kubevirt.kmash.com.

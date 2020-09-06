@@ -1,0 +1,5 @@
+yum install haproxy
+Edit /etc/haproxy/haproxy.cfg
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --reload 

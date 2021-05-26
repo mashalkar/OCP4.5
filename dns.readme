@@ -1,6 +1,8 @@
 yum install bind bind-utils
 Edit /etc/named.conf
-Add forward and reverse files
+ 1) make sure you comment files that listen only on localhost with //
+ 2) Also make sure allow-query is allowing your network like 10.65.176.0/23
+ 3) Add entry of forward and reverse files. 
 systemctl start named
 systemctl enable named
 firewall-cmd --permanent --add-port=53/tcp

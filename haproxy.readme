@@ -1,5 +1,7 @@
 yum install haproxy
+setsebool -P haproxy_connect_any=1
 Edit /etc/haproxy/haproxy.cfg
 firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=https
 firewall-cmd --reload 
+systemctl start haproxy
